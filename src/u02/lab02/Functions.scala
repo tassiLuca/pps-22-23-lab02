@@ -55,4 +55,4 @@ object Functions extends App:
 
   // val g: String => Int = s => s.size
   // val f: Int => Int = _ * 2
-  println(compose3((n: Int) => n * 2, (s: String) => s.size)("hello"))
+  println(compose3((n: Int) => n * 2, (s: String) => s.length)("hello"))
