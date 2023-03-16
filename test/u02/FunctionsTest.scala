@@ -3,7 +3,7 @@ package u02
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Assertions.assertFalse
-import u02.lab02.Functions.neg3
+import u02.Lab.*
 
 class FunctionsTest:
 
