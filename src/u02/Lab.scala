@@ -83,9 +83,11 @@ object Lab extends App:
       case Circle(r) => 2 * Math.PI * r
 
     def contains(shape: Shape, point: (Double, Double)): Boolean = (shape, point) match
-      case (Rectangle(w, h), (x, y)) => x >= 0 && x <= w && y >= 0 && y <= h
-      case (Square(s), (x, y)) => x >= 0 && x <= s && y >= 0 && y <= s
+      case (Rectangle(w, h), (x, y)) => isInside(x)(0)(w) && isInside(y)(0)(h)
+      case (Square(s), (x, y)) => isInside(x)(0)(s) && isInside(y)(0)(s)
       case (Circle(r), (x, y)) => Math.sqrt((x * x) + (y * y)) <= r
+
+    private def isInside(x: Double)(infLimit: Double)(maxLimit: Double) = x >= infLimit && x <= maxLimit
 
   //************************************** TASK 5 ***************************************
   import Option.*
